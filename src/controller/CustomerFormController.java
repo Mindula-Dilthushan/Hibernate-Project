@@ -12,7 +12,6 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import tm.CustomerTM;
-
 import java.util.List;
 
 public class CustomerFormController {
@@ -20,76 +19,63 @@ public class CustomerFormController {
     public JFXTextField txtName;
     public JFXTextField txtAddress;
     public JFXTextField txtSalary;
-    public TableView<CustomerDTO> tblCustomer;
+    public TableView<CustomerTM> tblCustomer;
     public TableColumn<CustomerTM,String>colId, colName, colAddress, colSalary;
     public JFXButton btnSave;
     public JFXButton btnUpdate;
     public JFXButton btnDelete;
 
     CustomerBO customerBO = (CustomerBO) BOFactory.getBoFactory().getSuperBO(BOFactory.BOType.CUSTOMER);
-    ObservableList<CustomerDTO> customerTMObservableList = FXCollections.observableArrayList();
-    List<CustomerDTO> customerDTOS = null;
 
     public void initialize() {
         colId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colName.setCellValueFactory(new PropertyValueFactory<>("name"));
         colAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
         colSalary.setCellValueFactory(new PropertyValueFactory<>("salary"));
-
-        tblCustomer.setItems(customerTMObservableList);
         lordAllCustomer();
-
-        System.out.println("customerTMObservableList = " + customerTMObservableList);
     }
-
-
     private void lordAllCustomer() {
-
-
-        System.out.println("1111");
-
-        try{
-            List<CustomerDTO> customerDTOS = customerBO.getAllCustomer();
-            System.out.println("customerDTOS 1  = " + customerDTOS);
-            this.customerDTOS=customerDTOS;
-            System.out.println("customerDTOS 2 = " + customerDTOS);
-        }catch (Exception e){
-
-        }
-
-        System.out.println("2222");
-
-    }
-
-    public void btnDeleteOnAction(ActionEvent actionEvent) {
-        try{
-            CustomerDTO customerDTO = customers();
-            boolean delete = customerBO.deleteCustomer(customerDTO);
-            if (!delete){
-                System.out.println("Deleted");
-            }else {
-                System.out.println("No");
+        try {
+            ObservableList<CustomerTM> customerTMObservableList = FXCollections.observableArrayList();
+            List<CustomerDTO> customerDTOList = customerBO.getAllCustomer();
+            for (CustomerDTO customerDTO: customerDTOList){
+                CustomerTM customerTM = new CustomerTM(
+                        customerDTO.getId(),
+                        customerDTO.getName(),
+                        customerDTO.getAddress(),
+                        customerDTO.getSalary()
+                );
+                System.out.println("customerDTOList = " + customerDTOList);
+                System.out.println("customerTMObservableList = " + customerTMObservableList);
+                customerTMObservableList.add(customerTM);
+                tblCustomer.setItems(customerTMObservableList);
             }
         }catch (Exception e){
-
         }
-
     }
-
+    public void btnDeleteOnAction(ActionEvent actionEvent) {
+        try {
+            CustomerDTO customerDTO = customers();
+                if (!customerBO.deleteCustomer(customerDTO.getId())){
+                    System.out.println("yes");
+                }else {
+                    System.out.println("no");
+                }
+        }catch (Exception e){
+        }
+    }
     public void btnUpdateOnAction(ActionEvent actionEvent) {
         try{
             CustomerDTO customerDTO = customers();
             boolean update = customerBO.updateCustomer(customerDTO);
-            if (update){
+            if (!update){
                 System.out.println("yes");
             }else {
                 System.out.println("no");
             }
         }catch (Exception e){
-
         }
     }
-
     public void btnSaveOnAction(ActionEvent actionEvent) {
         try {
             CustomerDTO customerDTO = customers();
@@ -101,9 +87,23 @@ public class CustomerFormController {
         } catch (Exception e) {
         }
     }
-    public void txtIdOnAction(ActionEvent actionEvent) {
-    }
+    public void txtIdOnAction(ActionEvent actionEvent) throws Exception {
+        try {
 
+            CustomerDTO customerDTO = customerBO.searchCustomer(txtId.getText());
+            if (customerDTO != null) {
+                System.out.println(customerDTO);
+                txtId.setText(customerDTO.getId());
+                txtName.setText(customerDTO.getName());
+                txtAddress.setText(customerDTO.getAddress());
+                txtSalary.setText(String.valueOf(customerDTO.getSalary()));
+                System.out.println("yes");
+            } else {
+                System.out.println("no");
+            }
+        }catch (Exception e){
+        }
+    }
     private CustomerDTO customers() {
         return new CustomerDTO(
                 txtId.getText(),
@@ -112,7 +112,6 @@ public class CustomerFormController {
                 Double.parseDouble(txtSalary.getText())
         );
     }
-
     private void clearText() {
         txtId.setText(null);
         txtName.setText(null);

@@ -1,9 +1,10 @@
 package entity.custom;
 
 import entity.SuperEntity;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import java.util.List;
 
 @Entity
 public class Customer implements SuperEntity {
@@ -12,6 +13,9 @@ public class Customer implements SuperEntity {
     private String name;
     private String address;
     private Double salary;
+
+//    @OneToMany(mappedBy = "customer")
+//    private List<Order> orderList;
 
     public Customer() {
     }
@@ -22,6 +26,14 @@ public class Customer implements SuperEntity {
         this.address = address;
         this.salary = salary;
     }
+
+//    public Customer(String id, String name, String address, Double salary, List<Order> orderList) {
+//        this.id = id;
+//        this.name = name;
+//        this.address = address;
+//        this.salary = salary;
+//        this.orderList = orderList;
+//    }
 
     public String getId() {
         return id;
@@ -55,6 +67,14 @@ public class Customer implements SuperEntity {
         this.salary = salary;
     }
 
+//    public List<Order> getOrderList() {
+//        return orderList;
+//    }
+//
+//    public void setOrderList(List<Order> orderList) {
+//        this.orderList = orderList;
+//    }
+
     @Override
     public String toString() {
         return "Customer{" +
@@ -62,6 +82,7 @@ public class Customer implements SuperEntity {
                 ", name='" + name + '\'' +
                 ", address='" + address + '\'' +
                 ", salary=" + salary +
+//                ", orderList=" + orderList +
                 '}';
     }
 }

@@ -5,7 +5,6 @@ import dao.DAOFactory;
 import dao.custom.CustomerDAO;
 import dto.CustomerDTO;
 import entity.custom.Customer;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,44 +35,33 @@ public class CustomerBOImpl implements CustomerBO {
         );
     }
     @Override
-    public boolean deleteCustomer(CustomerDTO customerDTO) throws Exception {
-        return customerDAO.delete(
-                new Customer(
-                        customerDTO.getId(),
-                        customerDTO.getName(),
-                        customerDTO.getAddress(),
-                        customerDTO.getSalary()
-                )
-        );
+    public boolean deleteCustomer(String id) throws Exception {
+        return customerDAO.delete(id);
     }
     @Override
-    public CustomerDTO searchCustomer(CustomerDTO customerDTO) throws Exception {
-        return getCustomerDTO(customerDAO.search(getCustomer(customerDTO)));
-
+    public CustomerDTO searchCustomer(String id) throws Exception {
+       Customer customer=customerDAO.search(id);
+       return new CustomerDTO(
+               customer.getId(),
+               customer.getName(),
+               customer.getAddress(),
+               customer.getSalary()
+       );
     }
     @Override
     public List<CustomerDTO> getAllCustomer() throws Exception {
-        List<CustomerDTO> customerDTO = new ArrayList<>();
         List<Customer> customerList = customerDAO.getAll();
+        ArrayList<CustomerDTO>customerDTOArrayList = new ArrayList<>();
         for (Customer customer : customerList){
-            customerDTO.add(getCustomerDTO(customer));
+            customerDTOArrayList.add(
+                    new CustomerDTO(
+                            customer.getId(),
+                            customer.getName(),
+                            customer.getAddress(),
+                            customer.getSalary()
+                    )
+            );
         }
-        return customerDTO;
-    }
-    private CustomerDTO getCustomerDTO(Customer customer){
-        return new CustomerDTO(
-                customer.getId(),
-                customer.getName(),
-                customer.getAddress(),
-                customer.getSalary()
-        );
-    }
-    private Customer getCustomer(CustomerDTO customerDTO){
-        return new Customer(
-                customerDTO.getId(),
-                customerDTO.getName(),
-                customerDTO.getAddress(),
-                customerDTO.getSalary()
-        );
+        return customerDTOArrayList;
     }
 }
