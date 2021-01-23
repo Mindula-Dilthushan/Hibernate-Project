@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
+   <children>
+      <Label layoutX="32.0" layoutY="133.0" prefHeight="434.0" prefWidth="184.0" style="-fx-background-color: yellow; -fx-background-radius: 40;" text=" " />
+      <JFXButton fx:id="btnCust" buttonType="RAISED" layoutX="65.0" layoutY="183.0" onAction="#btnCustOnAction" style="-fx-background-radius: 40;" text="Customer">
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="#ffee00" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+         <font>
+            <Font name="Comic Sans MS Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnItem" buttonType="RAISED" layoutX="85.0" layoutY="269.0" onAction="#btnItemOnAction" style="-fx-background-radius: 40;" text="Item">
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="#ffee00" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+         <font>
+            <Font name="Comic Sans MS Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnOrder" buttonType="RAISED" layoutX="80.0" layoutY="358.0" onAction="#btnOrderOnAction" style="-fx-background-radius: 40;" text="Order">
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="#ffee00" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+         <font>
+            <Font name="Comic Sans MS Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnOrderDetail" buttonType="RAISED" layoutX="47.0" layoutY="459.0" onAction="#btnOrderDetailOnAction" style="-fx-background-radius: 40;" text="OrderDetails">
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="#ffee00" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+         <font>
+            <Font name="Comic Sans MS Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane fx:id="mainAnchor" layoutX="239.0" layoutY="133.0" prefHeight="435.0" prefWidth="1040.0" style="-fx-border-color: black;" />
+   </children>
+</AnchorPane>

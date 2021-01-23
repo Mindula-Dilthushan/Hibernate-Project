@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="435.0" prefWidth="1040.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ItemFormController">
+   <children>
+      <JFXTextField fx:id="txtCode" labelFloat="true" layoutX="38.0" layoutY="30.0" onAction="#txtCodeOnAction" prefHeight="37.0" prefWidth="132.0" promptText="code">
+         <font>
+            <Font name="Comic Sans MS" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField fx:id="txtDesc" labelFloat="true" layoutX="211.0" layoutY="30.0" prefHeight="37.0" prefWidth="185.0" promptText="description">
+         <font>
+            <Font name="Comic Sans MS" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField fx:id="txtQty" labelFloat="true" layoutX="38.0" layoutY="96.0" prefHeight="37.0" prefWidth="359.0" promptText="qty">
+         <font>
+            <Font name="Comic Sans MS" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField fx:id="txtUnitPrice" labelFloat="true" layoutX="38.0" layoutY="167.0" prefHeight="37.0" prefWidth="258.0" promptText="unit price">
+         <font>
+            <Font name="Comic Sans MS" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <TableView fx:id="tblItem" layoutX="38.0" layoutY="226.0" prefHeight="201.0" prefWidth="965.0">
+         <columns>
+            <TableColumn fx:id="colCode" prefWidth="107.0" text="Code" />
+            <TableColumn fx:id="colDescription" prefWidth="395.0" text="Description" />
+            <TableColumn fx:id="colQty" prefWidth="198.0" text="QTY" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="264.0" text="Unit Price (Rs)" />
+         </columns>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </TableView>
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="525.0" layoutY="32.0" onAction="#btnSaveOnAction" prefHeight="36.0" prefWidth="143.0" style="-fx-background-radius: 40;" text="Save">
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#00cfff" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+         <font>
+            <Font name="Comic Sans MS" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="525.0" layoutY="98.0" onAction="#btnUpdateOnAction" prefHeight="36.0" prefWidth="143.0" style="-fx-background-radius: 40;" text="Update">
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#00cfff" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+         <font>
+            <Font name="Comic Sans MS" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="525.0" layoutY="167.0" onAction="#btnDeleteOnAction" prefHeight="36.0" prefWidth="143.0" style="-fx-background-radius: 40;" text="Delete">
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#00cfff" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+         <font>
+            <Font name="Comic Sans MS" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="214.0" fitWidth="242.0" layoutX="778.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/img/1.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

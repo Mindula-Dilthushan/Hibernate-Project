@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="hibernate.cfg.xml/Hibernate">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.18">
+    <root id="1">
+      <ServerVersion>8.0.20</ServerVersion>
+      <DefaultEngine>InnoDB</DefaultEngine>
+      <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
+      <DefaultCasing>lower/lower</DefaultCasing>
+    </root>
+    <schema id="2" parent="1" name="information_schema">
+      <Collation>utf8_general_ci</Collation>
+    </schema>
+    <schema id="3" parent="1" name="mysql">
+      <Collation>utf8mb4_0900_ai_ci</Collation>
+    </schema>
+    <schema id="4" parent="1" name="performance_schema">
+      <Collation>utf8mb4_0900_ai_ci</Collation>
+    </schema>
+    <schema id="5" parent="1" name="sakila">
+      <Collation>utf8mb4_0900_ai_ci</Collation>
+    </schema>
+    <schema id="6" parent="1" name="sys">
+      <Collation>utf8mb4_0900_ai_ci</Collation>
+    </schema>
+    <schema id="7" parent="1" name="thogakade">
+      <Current>1</Current>
+      <Collation>utf8mb4_0900_ai_ci</Collation>
+    </schema>
+    <schema id="8" parent="1" name="world">
+      <Collation>utf8mb4_0900_ai_ci</Collation>
+    </schema>
+  </database-model>
+</dataSource>
