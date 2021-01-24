@@ -8,7 +8,7 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
-public class Order implements SuperEntity {
+public class Orders implements SuperEntity {
     @Id
     private String orderId;
     private String id;
@@ -18,10 +18,10 @@ public class Order implements SuperEntity {
 //    @ManyToMany
 //    private List<Item> itemList;
 
-    public Order() {
+    public Orders() {
     }
 
-    public Order(String orderId, String id, Date date) {
+    public Orders(String orderId, String id, Date date) {
         this.orderId = orderId;
         this.id = id;
         this.date = date;

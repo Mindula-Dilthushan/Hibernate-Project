@@ -13,6 +13,7 @@ public class DashBoardFormController {
     public JFXButton btnOrder;
     public JFXButton btnOrderDetail;
     public AnchorPane mainAnchor;
+    public JFXButton btnPlaceOrder;
 
     public void btnOrderDetailOnAction(ActionEvent actionEvent) {
     }
@@ -28,6 +29,8 @@ public class DashBoardFormController {
         lordAnchor("CustomerForm.fxml");
     }
 
+    public void btnPlaceOrderOnAction(ActionEvent actionEvent) {
+    }
     private void lordAnchor(String location) {
         try {
             mainAnchor.getChildren().clear();

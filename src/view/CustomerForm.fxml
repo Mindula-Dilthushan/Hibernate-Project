@@ -12,10 +12,9 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="435.0" prefWidth="1040.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerFormController">
    <children>
-      <JFXTextField fx:id="txtId" labelFloat="true" layoutX="38.0" layoutY="33.0" onAction="#txtIdOnAction" prefHeight="37.0" prefWidth="132.0" promptText="ID">
+      <JFXTextField fx:id="txtId" focusColor="WHITE" labelFloat="true" layoutX="38.0" layoutY="30.0" onAction="#txtIdOnAction" prefHeight="37.0" prefWidth="132.0" promptText="ID" styleClass="txt" stylesheets="@styles/styles.css">
          <font>
             <Font name="Comic Sans MS" size="18.0" />
          </font>
@@ -23,7 +22,7 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </JFXTextField>
-      <JFXTextField fx:id="txtName" labelFloat="true" layoutX="211.0" layoutY="33.0" prefHeight="37.0" prefWidth="185.0" promptText="Name">
+      <JFXTextField fx:id="txtName" focusColor="WHITE" labelFloat="true" layoutX="211.0" layoutY="30.0" prefHeight="37.0" prefWidth="185.0" promptText="Name" styleClass="txt" stylesheets="@styles/styles.css">
          <font>
             <Font name="Comic Sans MS" size="18.0" />
          </font>
@@ -31,7 +30,7 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </JFXTextField>
-      <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="38.0" layoutY="99.0" prefHeight="37.0" prefWidth="359.0" promptText="Address">
+      <JFXTextField fx:id="txtAddress" focusColor="WHITE" labelFloat="true" layoutX="38.0" layoutY="96.0" prefHeight="37.0" prefWidth="359.0" promptText="Address" styleClass="txt" stylesheets="@styles/styles.css">
          <font>
             <Font name="Comic Sans MS" size="18.0" />
          </font>
@@ -39,7 +38,7 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </JFXTextField>
-      <JFXTextField fx:id="txtSalary" labelFloat="true" layoutX="38.0" layoutY="170.0" prefHeight="37.0" prefWidth="258.0" promptText="Salary">
+      <JFXTextField fx:id="txtSalary" focusColor="WHITE" labelFloat="true" layoutX="38.0" layoutY="167.0" prefHeight="37.0" prefWidth="258.0" promptText="Salary" styleClass="txt" stylesheets="@styles/styles.css">
          <font>
             <Font name="Comic Sans MS" size="18.0" />
          </font>
@@ -47,7 +46,7 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </JFXTextField>
-      <TableView fx:id="tblCustomer" layoutX="38.0" layoutY="229.0" prefHeight="201.0" prefWidth="965.0">
+      <TableView fx:id="tblCustomer" layoutX="38.0" layoutY="226.0" prefHeight="201.0" prefWidth="965.0">
         <columns>
           <TableColumn fx:id="colId" prefWidth="94.0" text="ID" />
           <TableColumn fx:id="colName" prefWidth="223.0" text="Name" />
@@ -58,7 +57,7 @@
             <Cursor fx:constant="CLOSED_HAND" />
          </cursor>
       </TableView>
-      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="525.0" layoutY="35.0" onAction="#btnSaveOnAction" prefHeight="36.0" prefWidth="143.0" style="-fx-background-radius: 40;" text="Save">
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="525.0" layoutY="32.0" onAction="#btnSaveOnAction" prefHeight="36.0" prefWidth="143.0" style="-fx-background-radius: 40;" text="Save" textFill="WHITE">
          <ripplerFill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -74,7 +73,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="525.0" layoutY="101.0" onAction="#btnUpdateOnAction" prefHeight="36.0" prefWidth="143.0" style="-fx-background-radius: 40;" text="Update">
+      <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="525.0" layoutY="98.0" onAction="#btnUpdateOnAction" prefHeight="36.0" prefWidth="143.0" style="-fx-background-radius: 40;" text="Update" textFill="WHITE">
          <ripplerFill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -90,7 +89,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="525.0" layoutY="170.0" onAction="#btnDeleteOnAction" prefHeight="36.0" prefWidth="143.0" style="-fx-background-radius: 40;" text="Delete">
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="525.0" layoutY="167.0" onAction="#btnDeleteOnAction" prefHeight="36.0" prefWidth="143.0" style="-fx-background-radius: 40;" text="Delete" textFill="WHITE">
          <ripplerFill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -106,7 +105,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <ImageView fitHeight="214.0" fitWidth="242.0" layoutX="778.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="214.0" fitWidth="242.0" layoutX="778.0" layoutY="8.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../asserts/img/1.jpg" />
          </image>

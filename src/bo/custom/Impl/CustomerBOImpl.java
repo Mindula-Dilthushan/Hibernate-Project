@@ -5,7 +5,6 @@ import dao.DAOFactory;
 import dao.custom.CustomerDAO;
 import dto.CustomerDTO;
 import entity.custom.Customer;
-import java.util.ArrayList;
 import java.util.List;
 
 public class CustomerBOImpl implements CustomerBO {
@@ -50,18 +49,6 @@ public class CustomerBOImpl implements CustomerBO {
     }
     @Override
     public List<CustomerDTO> getAllCustomer() throws Exception {
-        List<Customer> customerList = customerDAO.getAll();
-        ArrayList<CustomerDTO>customerDTOArrayList = new ArrayList<>();
-        for (Customer customer : customerList){
-            customerDTOArrayList.add(
-                    new CustomerDTO(
-                            customer.getId(),
-                            customer.getName(),
-                            customer.getAddress(),
-                            customer.getSalary()
-                    )
-            );
-        }
-        return customerDTOArrayList;
+        return null;
     }
 }

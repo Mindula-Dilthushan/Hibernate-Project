@@ -8,6 +8,7 @@ import dto.CustomerDTO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -28,10 +29,10 @@ public class CustomerFormController {
     CustomerBO customerBO = (CustomerBO) BOFactory.getBoFactory().getSuperBO(BOFactory.BOType.CUSTOMER);
 
     public void initialize() {
-        colId.setCellValueFactory(new PropertyValueFactory<>("id"));
-        colName.setCellValueFactory(new PropertyValueFactory<>("name"));
-        colAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
-        colSalary.setCellValueFactory(new PropertyValueFactory<>("salary"));
+        colId.setCellValueFactory(new PropertyValueFactory<>("customerID"));
+        colName.setCellValueFactory(new PropertyValueFactory<>("customerName"));
+        colAddress.setCellValueFactory(new PropertyValueFactory<>("customerAddress"));
+        colSalary.setCellValueFactory(new PropertyValueFactory<>("customerSalary"));
         lordAllCustomer();
     }
     private void lordAllCustomer() {
@@ -57,9 +58,12 @@ public class CustomerFormController {
         try {
             CustomerDTO customerDTO = customers();
                 if (!customerBO.deleteCustomer(customerDTO.getId())){
-                    System.out.println("yes");
+                    System.out.println("Deleted Customer");
+                    new Alert(Alert.AlertType.INFORMATION, "Delete Customer..!").show();
+                    clearText();
                 }else {
-                    System.out.println("no");
+                    System.out.println("No Deleted");
+                    new Alert(Alert.AlertType.ERROR, "Error").show();
                 }
         }catch (Exception e){
         }
@@ -69,9 +73,12 @@ public class CustomerFormController {
             CustomerDTO customerDTO = customers();
             boolean update = customerBO.updateCustomer(customerDTO);
             if (!update){
-                System.out.println("yes");
+                System.out.println("updated");
+                new Alert(Alert.AlertType.INFORMATION, "Update Customer Success..!").show();
+                clearText();
             }else {
-                System.out.println("no");
+                System.out.println("no update");
+                new Alert(Alert.AlertType.ERROR, "Error").show();
             }
         }catch (Exception e){
         }
@@ -82,7 +89,10 @@ public class CustomerFormController {
             boolean save = customerBO.addCustomer(customerDTO);
             if (save) {
                 System.out.println("save = " + save);
+                new Alert(Alert.AlertType.INFORMATION, "Saved Customer..!").show();
                 clearText();
+            }else {
+                new Alert(Alert.AlertType.ERROR, "Not Save Customer").show();
             }
         } catch (Exception e) {
         }

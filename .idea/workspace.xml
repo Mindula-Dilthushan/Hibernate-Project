@@ -20,33 +20,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e25cff94-290d-4ffd-93a9-0665a64beb50" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/antlr_2_7_71.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/img/customerForm.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/img/itemForm.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dao/custom/ItemDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dao/custom/OrderDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/custom/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/custom/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/custom/OrderDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/09bc64b3-ee1c-42ad-b2b1-252e46f0b14d.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/09bc64b3-ee1c-42ad-b2b1-252e46f0b14d/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7834a5b7-df84-4a7c-b357-3101ea0abcc0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7834a5b7-df84-4a7c-b357-3101ea0abcc0/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/video/Demo Video.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bo/custom/Impl/ItemBOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bo/custom/Impl/OrderBOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bo/custom/ItemBO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bo/custom/OrderBO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dao/custom/Impl/ItemDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dao/custom/Impl/OrderDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dto/ItemDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tm/ItemTM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/styles/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hibernate-Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Hibernate-Project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bo/custom/CustomerBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bo/custom/CustomerBO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bo/BOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bo/BOFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bo/custom/Impl/CustomerBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bo/custom/Impl/CustomerBOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/CustomerFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/CustomerFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/CrudDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/CrudDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/DashBoardFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/DashBoardFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ItemFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ItemFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/DAOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/DAOFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dao/custom/Impl/CustomerDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/custom/Impl/CustomerDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/custom/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/custom/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/custom/OrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/custom/OrderDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/custom/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/custom/Orders.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/util/HibernateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/HibernateUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/CustomerForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/CustomerForm.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/DashBoardForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/DashBoardForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/ItemForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ItemForm.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,8 +54,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -86,6 +84,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/txw2-2.3.1.jar!/" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -127,6 +126,9 @@
       <workItem from="1611386934568" duration="514000" />
       <workItem from="1611414324895" duration="7689000" />
       <workItem from="1611422188990" duration="395000" />
+      <workItem from="1611455761708" duration="1497000" />
+      <workItem from="1611457330411" duration="2887000" />
+      <workItem from="1611460403502" duration="121000" />
     </task>
     <servers />
   </component>
@@ -161,10 +163,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="317" y="38" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1611422198272" />
-    <state x="574" y="123" key="#com.intellij.ide.util.MemberChooser" timestamp="1611419284374">
+    <state x="574" y="123" key="#com.intellij.ide.util.MemberChooser" timestamp="1611457732640">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="574" y="123" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1611419284374" />
+    <state x="574" y="123" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1611457732640" />
     <state x="883" y="167" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1611420788942">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -173,42 +175,46 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="473" y="158" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1611387361861" />
-    <state width="1493" height="377" key="GridCell.Tab.0.bottom" timestamp="1611422586094">
+    <state width="1493" height="240" key="GridCell.Tab.0.bottom" timestamp="1611460526388">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="377" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1611422586094" />
-    <state width="1493" height="377" key="GridCell.Tab.0.center" timestamp="1611422586094">
+    <state width="1493" height="240" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1611460526388" />
+    <state width="1493" height="240" key="GridCell.Tab.0.center" timestamp="1611460526388">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="377" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1611422586094" />
-    <state width="1493" height="377" key="GridCell.Tab.0.left" timestamp="1611422586094">
+    <state width="1493" height="240" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1611460526388" />
+    <state width="1493" height="240" key="GridCell.Tab.0.left" timestamp="1611460526388">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="377" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1611422586094" />
-    <state width="1493" height="377" key="GridCell.Tab.0.right" timestamp="1611422586094">
+    <state width="1493" height="240" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1611460526388" />
+    <state width="1493" height="240" key="GridCell.Tab.0.right" timestamp="1611460526388">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="377" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1611422586094" />
-    <state width="1493" height="377" key="GridCell.Tab.1.bottom" timestamp="1611422586094">
+    <state width="1493" height="240" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1611460526388" />
+    <state width="1493" height="375" key="GridCell.Tab.1.bottom" timestamp="1611460256522">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="377" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1611422586094" />
-    <state width="1493" height="377" key="GridCell.Tab.1.center" timestamp="1611422586094">
+    <state width="1493" height="375" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1611460256522" />
+    <state width="1493" height="375" key="GridCell.Tab.1.center" timestamp="1611460256522">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="377" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1611422586094" />
-    <state width="1493" height="377" key="GridCell.Tab.1.left" timestamp="1611422586094">
+    <state width="1493" height="375" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1611460256522" />
+    <state width="1493" height="375" key="GridCell.Tab.1.left" timestamp="1611460256522">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="377" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1611422586094" />
-    <state width="1493" height="377" key="GridCell.Tab.1.right" timestamp="1611422586094">
+    <state width="1493" height="375" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1611460256522" />
+    <state width="1493" height="375" key="GridCell.Tab.1.right" timestamp="1611460256522">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="377" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1611422586094" />
+    <state width="1493" height="375" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1611460256522" />
     <state width="189" height="457" key="HiddenNamespacesPopup" timestamp="1611381986901">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="189" height="457" key="HiddenNamespacesPopup/0.0.1536.834@0.0.1536.834" timestamp="1611381986901" />
+    <state x="349" y="160" key="IDE.errors.dialog" timestamp="1611458953665">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="349" y="160" key="IDE.errors.dialog/0.0.1536.834@0.0.1536.834" timestamp="1611458953665" />
     <state x="249" y="0" key="SettingsEditor" timestamp="1611387364105">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

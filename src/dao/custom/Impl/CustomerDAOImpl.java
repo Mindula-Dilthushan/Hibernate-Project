@@ -2,6 +2,7 @@ package dao.custom.Impl;
 
 import dao.custom.CustomerDAO;
 import entity.custom.Customer;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import util.HibernateUtil;
@@ -46,6 +47,12 @@ public class CustomerDAOImpl implements CustomerDAO {
     }
     @Override
     public List<Customer> getAll() throws Exception {
-        return null;
+        Session session = HibernateUtil.getSession();
+        Transaction transaction = session.beginTransaction();
+        Query query = session.createNamedQuery("FROM Customer");
+        List list = query.list();
+        transaction.commit();
+        session.close();
+        return list;
     }
 }
